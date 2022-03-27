@@ -36,7 +36,7 @@ const meetupCollection=db.collection("meetups");
     client.close();
 
     return{
-fallback:false,
+fallback:'blocking',
 paths:
   selestmeetup.map((meetup)=>({params:{meetupid:meetup._id.toString()}
 }))
